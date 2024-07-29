@@ -272,4 +272,247 @@ ul{
     display: flex;
     justify-content: space-between;
   }
- 
+ .hut{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(45, 44, 44);
+ }
+ .hut1{
+    display: flex;
+    justify-content: space-evenly;
+    width:75%;
+    margin-left: 10%;
+    padding-top: 16px;
+    align-items: center;
+ }
+ .listy{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ .but button{
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 6px 25px;
+ }
+.foot1{
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(61, 60, 60);
+}
+.infoo{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-left: 9.6%;
+}
+.i1{
+  height: 40px;
+  width: 80px;
+}
+.i1 p{
+  font-size: 8px;
+}
+.footer{
+  background-color: rgb(45, 44, 44);
+  width: 100%;
+  height: 120vh;
+  line-height: 5vh;
+}
+.footy{
+  width: 60%;
+  margin-left: 12%;
+  color: white;
+}
+.footy h3{
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footy p{
+  font-size: 10px;
+}
+.fyu{
+  margin-top: 15%;
+}
+.footim{
+  transform: translate(45%,50%);
+}
+.smedilog{
+  display: flex;
+  width: 49px;
+  margin-left: 39.5%;
+  margin-top: 2%;
+}
+.smedilog img{
+  opacity: 0.5;
+  margin-right: 8px;
+}
+.copy{
+  margin-top: 15px;
+}
+.copy p{
+  opacity: 0.6;
+  font-size: 12px;
+  color: white;
+  text-align:center;
+}
+.coverim{
+  width: 100%;
+  height: 70vh;
+  background-color: red;
+  background-image: url("../img/dandwcover.jpg");
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+
+}
+.covee{
+  margin-left: 11%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+.cover2{
+  margin-top: 3.7%;
+  
+}
+.cover2 img{
+  border-radius: 8px;
+}
+.conte{
+  color:white;
+  margin-top: 3.7%;
+  margin-left: 5%;
+
+}
+.conte h3{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rate{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  width: 50%;
+  font-size: 17px;
+  padding: 10px 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(71, 71, 71, 0.838);
+  border-radius: 7px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.rate button{
+  border-radius: 8px;
+  padding: 10px 10px;
+}
+.dd p{
+  align-items: center;
+  border: 1px solid;
+  width: 50%;
+  font-size: 17px;
+  padding: 10px 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+  color: black;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+.dd h4{
+  align-items: center;
+  border: 1px solid;
+  width: 50%;
+  font-size: 17px;
+  padding: 10px 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+  color: black;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+.limo{
+  align-items: center;
+  font-size: 17px;
+  padding: 10px 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  margin-top: 20px;
+  font-weight: bolder;
+  
+}
+.but2 button{
+  background-color: red;
+  color: white;
+  padding: 15px 55px;
+  font-weight: bolder;
+  font-size: 15px;
+
+}
+.share{
+  font-size: 20px;
+  color: white;
+  margin-top: 3.7%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid white;
+  height: 24px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.abou{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 10vh;
+  width: 100%;
+}
+.bou{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 50%;
+  margin: 2% 10%;
+}
+.castm{
+  font-family: Arial, Helvetica, sans-serif;
+
+  height: 35vh;
+  width: 100%;
+}
+.cast{
+  font-family: Arial, Helvetica, sans-serif;
+
+  height: 100%;
+  width: 50%;
+  margin: 2% 10%;
+}
+.castt{
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: start;
+}
+.castr{
+  font-family: Arial, Helvetica, sans-serif;
+
+  height: 100%;
+  width: 20%;
+  margin-right: 1%;
+  text-align: center;
+}
+.castr img{
+  height: 50%;
+  width: 90%;
+  border-radius: 50%;
+}
+.footer2{
+  background-color: rgb(45, 44, 44);
+  width: 100%;
+  height: 140vh;
+  line-height: 5vh;
+}
