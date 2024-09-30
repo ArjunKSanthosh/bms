@@ -32,13 +32,26 @@
     width: 40%;
 }
 .nav5{
-    background-color: red;
     color: white;
     font-family: "Roboto", sans-serif;
-    font-weight: lighter;
     font-size: 13px;
-    padding: 5px 6px;
-    border-radius: 8px;
+    
+}
+.nav5 button{
+  background-color: red;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+.nav6 button{
+  background-color: red;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold; 
 }
 .nav4{
     margin-top: 5px;
@@ -515,4 +528,12 @@ ul{
   width: 100%;
   height: 140vh;
   line-height: 5vh;
+}
+.filter{
+  display: flex;
+  justify-content: center;
+}
+.rec2{
+ margin-left: 6%;
+ margin-bottom: 2%;
 }
