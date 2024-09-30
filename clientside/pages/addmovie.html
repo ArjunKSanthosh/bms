@@ -4,38 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/addmovie.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Add Movie</title>
 </head>
 <body>
-    <div class="container">
+    <div class="nav1" style="width: 100%;">
+        <div class="inn">
+      <div class="left">
+        <div class="nav2">
+            <img src="../img/bms.svg" alt="">
+        </div>
+        <div class="nav3">
+            <input type="text" name="" id="" placeholder="Search for Movies,Events,Plays,Sport and Activities" style="width: 600px; height:4vh">
+        </div>
+     </div>
+   
+   </div>
+    </div>
+    <div class="container" id="frm">
         <h1>Add Movie</h1>
         <form id="movie-form">
             <div class="form-group">
                 <label for="title">Movie Title:</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="title" >
             </div>
             <div class="form-group">
                 <label for="duration">Duration (in minutes):</label>
-                <input type="number" id="duration" name="duration" required>
+                <input type="number" id="duration" name="duration" >
             </div>
             <div class="form-group">
                 <label for="genre">Genre:</label>
-                <input type="text" id="genre" name="genre" required>
+                <input type="text" id="genre" name="genre" >
             </div>
             <div class="form-group">
                 <label for="release-date">Release Date:</label>
-                <input type="date" id="release-date" name="release-date" required>
+                <input type="date" id="release-date" name="release-date" >
             </div>
             <div class="form-group">
                 <label for="language">Language:</label>
-                <input type="text" id="language" name="language" required>
+                <input type="text" id="language" name="language" >
             </div>
             <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required>
+                <label for="certification">Certification:</label>
+                <select id="certification" name="certification" >
+                    <option value="U">U</option>
+                    <option value="UA">UA</option>
+                    <option value="A">A</option>
+                    <option value="S">S</option>
+                </select>            
+            </div>
+            <div class="form-group">
+                <label for="picture">Image:</label>
+                <input type="file" id="picture" name="picture" accept="image/*" >
             </div>
             <button type="submit">Add Movie</button>
         </form>
     </div>
+    <script src="../js/add.js"></script>
 </body>
 </html>
