@@ -5,13 +5,15 @@ console.log(id);
 async function getMovie() {
     const res=await fetch(`http://localhost:3000/api/getmovie/${id}`)
     const movie=await res.json();
+    console.log(movie.releasedate);
+    
     document.getElementById("picture").src=movie.picture;
     document.getElementById("title").textContent=movie.title;
-    document.getElementById("language").textContent=`Language:${movie.language}`;
-    document.getElementById("duration").textContent=`Duration:${timeConvert(movie.duration)}`;
-    document.getElementById("genre").textContent=`Genre:${movie.genre}`;
-    document.getElementById("certification").textContent=`Certification:${movie.certification}`;
-    document.getElementById("date").textContent=movie.releasedate;
+    document.getElementById("language").textContent=`•${movie.language}`;
+    document.getElementById("duration").textContent=`•${timeConvert(movie.duration)}`;
+    document.getElementById("genre").textContent=`•${movie.genre}`;
+    document.getElementById("certification").textContent=`•${movie.certification}`;
+    document.getElementById("date").textContent=`•${movie.releasedate}`;
     document.getElementById("buttons").innerHTML=`<a href="../pages/edit.html?id=${movie._id}"><button id="edit">Edit</button></a>
                         <button onclick="deleteMovie('${movie._id}')" id="delete">Delete</button>`
 }
