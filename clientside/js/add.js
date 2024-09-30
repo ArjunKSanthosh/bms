@@ -2,7 +2,7 @@ let picture
 document.getElementById("frm").addEventListener("submit",async(e)=>{
     e.preventDefault();
     const title=document.getElementById("title").value;
-    const duration=document.getElementById("duration").value;
+    const duration=parseInt(document.getElementById("duration").value);
     const genre=document.getElementById("genre").value;
     const releaseDate=document.getElementById("release-date").value;
     const language=document.getElementById("language").value;
@@ -17,7 +17,7 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
         console.log(res);
         if(res.status==201){
             alert("success");
-            window.location.href=""
+            window.location.href="../index.html"
         }
         else{
             alert("error")

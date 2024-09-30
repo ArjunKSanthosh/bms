@@ -86,12 +86,23 @@ ul{
     font-size: 13px;
     width: 30%;
   }
+  .cardo{
+    margin-top: 1%;
+    margin-left: 9.5%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
   .card{
     margin-top: 1%;
     margin-left: 9.5%;
     width: 40%;
     display: flex;
     justify-content: space-evenly;
+  }
+  .cd{
+    margin-top: 6%;
   }
   .cover{
     margin-top: 10px;
@@ -381,8 +392,9 @@ ul{
   background-position: center;
 
 }
+
 .covee{
-  margin-left: 11%;
+  margin-left: 5%;
   display: flex;
   justify-content: space-evenly;
   width: 80%;
@@ -393,11 +405,13 @@ ul{
 }
 .cover2 img{
   border-radius: 8px;
+  width: 100%;
+  height: 55vh;
 }
 .conte{
   color:white;
   margin-top: 3.7%;
-  margin-left: 5%;
+  margin-left: 2%;
 
 }
 .conte h3{
@@ -454,14 +468,18 @@ ul{
   color:white;
   margin-top: 20px;
   font-weight: bolder;
-  
+  background-color: rgba(255, 255, 255, 0.427);
+  margin-bottom: 3%;
+  border-radius: 10px;
+  text-shadow: 2px 4px 0px rgba(11,7,7,0.52);
 }
 .but2 button{
   background-color: red;
   color: white;
-  padding: 15px 55px;
+  padding: 13px 55px;
   font-weight: bolder;
   font-size: 15px;
+  border-radius: 20px;
 
 }
 .share{
