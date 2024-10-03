@@ -2,12 +2,14 @@ const url=window.location.href;
 const urlParams=new URLSearchParams(url.split("?")[1]);
 const id=urlParams.get("id");
 let picture;
+let banner;
 async function getMovie() {
     const res=await fetch(`http://localhost:3000/api/getmovie/${id}`);
     const movie=await res.json();
     console.log(movie.releasedate);
     
     picture=movie.picture;
+    banner=movie.banner;
     document.getElementById("from").innerHTML=`
       <h1>Edit Movie Details</h1>
      <form id="movie-form">
@@ -30,6 +32,10 @@ async function getMovie() {
             <div class="form-group">
                 <label for="language">Language:</label>
                 <input type="text" id="language" name="language" value="${movie.language}" >
+            </div>
+             <div class="form-group">
+                <label for="format">Format:</label>
+                <input type="text" id="format" name="format" value="${movie.format}" >
             </div>
             <div class="form-group">
                 <label for="certification">Certification:</label>
@@ -62,11 +68,12 @@ document.getElementById("from").addEventListener("submit",async(e)=>{
     const genre=document.getElementById("genre").value;
     const releasedate=document.getElementById("release-date").value;
     const language=document.getElementById("language").value;
+    const format=document.getElementById("format").value;
     const certification=document.getElementById("certification").value;
     const res=await fetch(`http://localhost:3000/api/editmovie/${id}`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({title,duration,genre,releasedate,language,certification,picture})
+        body:JSON.stringify({title,duration,genre,releasedate,language,format,certification,picture,banner})
     })
     if(res.status==201){
         alert("Updated")
@@ -100,17 +107,5 @@ function convertToBase64(file) {
 
 async function ban(){
     console.log(document.getElementById("banner").files[0]);
-    picture=await convertToBase64(document.getElementById("banner").files[0]);
-}
-function convertToBase64(file) {
-    return new Promise((resolve,reject)=>{
-        const fileReader=new FileReader();
-        fileReader.readAsDataURL(file);   
-        fileReader.onload=()=>{
-            resolve(fileReader.result)
-        }
-        fileReader.onerror= (error)=>{
-            reject(error)
-        }
-    })
+    banner=await convertToBase64(document.getElementById("banner").files[0]);
 }

@@ -289,7 +289,13 @@ ul{
     opacity: 0.6;
   }
   .dw h3{
-    font-size: 50p;
+    font-size: 50px;
+    margin-right: 5% ;
+  }
+  .dw{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .searches2{
     margin-top: 5px;
@@ -400,7 +406,7 @@ ul{
   margin-left: 5%;
   display: flex;
   justify-content: space-evenly;
-  width: 80%;
+  width: 60%;
 }
 .cover2{
   margin-top: 3.7%;
@@ -413,23 +419,37 @@ ul{
 }
 .conte{
   color:white;
-  margin-top: 3.7%;
-  margin-left: 2%;
-
+  margin-top: 8%;
+  width: 60%;
 }
 .conte h3{
-  font-size: 30px;
+  font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .rate{
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
+  width: 70%;
+  color: black;
+  padding-left: 10px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 20px;
   font-weight: bold;
+  background-color: white;
+  border-radius: 4px;
+
+}
+.format
+{
+  width: 70%;
+  color: white;
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 40px;
+  font-weight: bold;
+  background-color: rgba(41, 41, 41, 0.636);
+  border: 0.5px solid white;
+  border-radius: 4px;
 }
 .rate button{
   border-radius: 8px;
@@ -437,7 +457,7 @@ ul{
 }
 .dd{
   display: flex;
-  width:110%;
+  width:80%;
 }
 .dd p{
   align-items: center;
@@ -453,36 +473,48 @@ width: 80%;
   align-items: center;
   width: 100%;
   font-size: 15px;
+  font-weight: lighter;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin-top: 20px;
 }
-.limo{
-  align-items: center;
-  font-size: 17px;
-  padding: 10px 80px;
-  font-family: Arial, Helvetica, sans-serif;
-  color:white;
-  margin-top: 20px;
-  font-weight: bolder;
-  background-color: rgba(255, 255, 255, 0.427);
-  margin-bottom: 3%;
-  border-radius: 10px;
-  text-shadow: 2px 4px 0px rgba(11,7,7,0.52);
-}
-.but2 button{
-  background-color: red;
+.booku button{
+  background-color:rgb(255, 65, 65);
   color: white;
-  padding: 13px 55px;
+  padding: 10px 50px;
   font-weight: bolder;
   font-size: 15px;
-  border-radius: 20px;
+ border: 1px solid red;
+  border-radius: 10px;
+  margin-top: 2%;
+}
 
+.but2 #edit{
+  background-color:rgba(255, 255, 255, 0.401);
+  color: white;
+  padding: 10px 50px;
+  font-weight: bolder;
+  font-size: 15px;
+ border: 1px solid blue;
+  border-radius: 10px;
+  margin-top: 5%;
+
+}
+.but2 #delete{
+  background-color:rgba(255, 255, 255, 0.401);
+  color: white;
+  padding: 10px 50px;
+  font-weight: bolder;
+  font-size: 15px;
+ border: 1px solid rgba(255, 74, 74, 0.912);
+  border-radius: 10px;
+  margin-top: 5%;
 }
 .share{
   font-size: 20px;
   color: white;
-  margin-top: 3.7%;
+  margin-top: 2%;
+  margin-left: 50;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid white;
   height: 24px;
@@ -490,6 +522,7 @@ width: 80%;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
+  background-color: red;
 }
 
 
