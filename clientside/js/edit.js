@@ -44,6 +44,10 @@ async function getMovie() {
                 <label for="picture">Image:</label>
                 <input type="file" id="picture" name="picture" accept="image/*"onchange="pic()">
             </div>
+               <div class="form-group">
+                <label for="banner">Banner:</label>
+                <input type="file" id="banner" name="banner" accept="image/*" onchange="ban()" >
+            </div>
             <button type="submit">Save</button>
         </form>
     `
@@ -79,6 +83,24 @@ document.getElementById("from").addEventListener("submit",async(e)=>{
 async function pic(){
     console.log(document.getElementById("picture").files[0]);
     picture=await convertToBase64(document.getElementById("picture").files[0]);
+}
+function convertToBase64(file) {
+    return new Promise((resolve,reject)=>{
+        const fileReader=new FileReader();
+        fileReader.readAsDataURL(file);   
+        fileReader.onload=()=>{
+            resolve(fileReader.result)
+        }
+        fileReader.onerror= (error)=>{
+            reject(error)
+        }
+    })
+}
+
+
+async function ban(){
+    console.log(document.getElementById("banner").files[0]);
+    picture=await convertToBase64(document.getElementById("banner").files[0]);
 }
 function convertToBase64(file) {
     return new Promise((resolve,reject)=>{
