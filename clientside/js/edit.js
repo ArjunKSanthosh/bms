@@ -10,32 +10,34 @@ async function getMovie() {
     
     picture=movie.picture;
     banner=movie.banner;
-    document.getElementById("from").innerHTML=`
-      <h1>Edit Movie Details</h1>
-     <form id="movie-form">
+    document.getElementById("frm").innerHTML=`
+      <h1>Add Movie</h1>
+        <form id="movie-form">
+            <div class="left1">
             <div class="form-group">
-                <label for="title">Movie Title</label>
-                <input type="text" id="title" name="title" value="${movie.title}" >
+
+                <label for="title">Movie Title:</label>
+                <input type="text" id="title" name="title" value="${movie.title}">
             </div>
             <div class="form-group">
                 <label for="duration">Duration (in minutes):</label>
-                <input type="number" id="duration" name="duration" value="${movie.duration}" >
+                <input type="number" id="duration" name="duration" value="${movie.duration}">
             </div>
             <div class="form-group">
                 <label for="genre">Genre:</label>
-                <input type="text" id="genre" name="genre" value="${movie.genre}" >
+                <input type="text" id="genre" name="genre"value="${movie.genre}" >
             </div>
             <div class="form-group">
                 <label for="release-date">Release Date:</label>
-                <input type="date" id="release-date" name="release-date" value="${movie.releasedate}" >
+                <input type="date" id="release-date" name="release-date" value="${movie.releasedate}">
             </div>
             <div class="form-group">
                 <label for="language">Language:</label>
-                <input type="text" id="language" name="language" value="${movie.language}" >
+                <input type="text" id="language" name="language" value="${movie.language}">
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label for="format">Format:</label>
-                <input type="text" id="format" name="format" value="${movie.format}" >
+                <input type="text" id="format" name="format"value="${movie.format}">
             </div>
             <div class="form-group">
                 <label for="certification">Certification:</label>
@@ -46,21 +48,31 @@ async function getMovie() {
                     <option value="S">S</option>
                 </select>            
             </div>
-            <div class="form-group">
+        </div>
+        <div class="right1">
+            <div class="formr-group">
                 <label for="picture">Image:</label>
-                <input type="file" id="picture" name="picture" accept="image/*"onchange="pic()">
+                <input type="file" id="picture" name="picture" accept="image/*" >
+                <div id="pic">
+                    <img src="${movie.picture}" alt="">
+                </div>
             </div>
-               <div class="form-group">
+            <div class="formr-group">
                 <label for="banner">Banner:</label>
-                <input type="file" id="banner" name="banner" accept="image/*" onchange="ban()" >
+                <input type="file" id="banner" name="banner" accept="image/*" >
+                <div id="ban">
+                    <img src="${movie.banner}" alt="">
+                </div>
             </div>
-            <button type="submit">Save</button>
+            <button type="submit">Add Movie</button>
+        </div>
+          
         </form>
     `
 }
 getMovie();
 
-document.getElementById("from").addEventListener("submit",async(e)=>{
+document.getElementById("frm").addEventListener("submit",async(e)=>{
     e.preventDefault();
     try {
         const title=document.getElementById("title").value;

@@ -38,12 +38,14 @@ document.getElementById("picture").addEventListener("change",async(e)=>{
     console.log("hdi");
     console.log(document.getElementById("picture").files[0]);
     picture=await convertToBase64(document.getElementById("picture").files[0]);
+    document.getElementById("pic").innerHTML=`<img src="${picture}" alt="">`
     // console.log(picture);
 })
 document.getElementById("banner").addEventListener("change",async(e)=>{
     console.log("hdi");
     console.log(document.getElementById("banner").files[0]);
-    picture=await convertToBase64(document.getElementById("banner").files[0]);
+    banner=await convertToBase64(document.getElementById("banner").files[0]);
+    document.getElementById("ban").innerHTML=`<img src="${banner}" alt="">`
     // console.log(picture);
 })
 function convertToBase64(file) {
