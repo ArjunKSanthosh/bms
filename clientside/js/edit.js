@@ -52,16 +52,16 @@ async function getMovie() {
         <div class="right1">
             <div class="formr-group">
                 <label for="picture">Image:</label>
-                <input type="file" id="picture" name="picture" accept="image/*" >
+                <input type="file" id="picture" name="picture" accept="image/*" onchange="pic()" >
                 <div id="pic">
-                    <img src="${movie.picture}" alt="">
+                    <img src="${movie.picture}" alt="" id="pic4">
                 </div>
             </div>
             <div class="formr-group">
                 <label for="banner">Banner:</label>
-                <input type="file" id="banner" name="banner" accept="image/*" >
+                <input type="file" id="banner" name="banner" accept="image/*" onchange="ban()">
                 <div id="ban">
-                    <img src="${movie.banner}" alt="">
+                    <img src="${movie.banner}" alt="" id="pic5">
                 </div>
             </div>
             <button type="submit">Add Movie</button>
@@ -102,6 +102,7 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
 async function pic(){
     console.log(document.getElementById("picture").files[0]);
     picture=await convertToBase64(document.getElementById("picture").files[0]);
+    document.getElementById("pic4").src=picture;
 }
 function convertToBase64(file) {
     return new Promise((resolve,reject)=>{
@@ -120,4 +121,5 @@ function convertToBase64(file) {
 async function ban(){
     console.log(document.getElementById("banner").files[0]);
     banner=await convertToBase64(document.getElementById("banner").files[0]);
+    document.getElementById("pic5").src=banner;
 }
